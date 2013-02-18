@@ -1,7 +1,33 @@
 #! /usr/bin/env bash
 
+USERNAME=afronski
+
+# Check root rights.
+WHOAMI=`whoami`
+if [ $WHOAMI != "root" ]; then
+    echo 'You cannot provision your system unless you are a root :('
+    exit
+fi
+
+# Copy keys from user directory to the root.
+if [ ! -d "/root/.ssh" ]; then
+    mkdir -p /root/.ssh
+fi
+
+GITHUB_ADDED=`cat /root/.ssh/config | grep "github.com" | awk '{ print $2 }'`
+
+if [ "$GITHUB_ADDED" != "github.com" ]; then
+    echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
+fi
+
+if [ ! -e "/root/.ssh/id_rsa" ]; then
+    cp /home/$USERNAME/.ssh/id_rsa* /root/.ssh/
+fi
+
+chmod 0600 /root/.ssh/id_rsa*
+
 # Prepare environment.
-sudo pacman -S --quiet --needed --noconfirm git ruby
+pacman -S --quiet --needed --noconfirm git ruby
 
 CHEF_INSTALLED=`gem list --installed "^chef$"`
 
