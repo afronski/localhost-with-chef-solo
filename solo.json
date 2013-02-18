@@ -2,6 +2,6 @@
     "run_list": [
         "recipe[pacman]",
         "recipe[packages-to-remove]",
-        "recipe[basic-setup::default]"
+        "recipe[basic-setup]"
     ]
 }
