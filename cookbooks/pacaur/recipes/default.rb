@@ -11,8 +11,6 @@ packages.each do |specified_package|
 end
 
 # Update AUR packages.
-upadate_aur = execute "update newly installed AUR packages" do
+execute "update newly installed AUR packages" do
     command "pacaur -Sua --noconfirm --noedit --noprogressbar"
 end
-
-upadate_aur.run_action(:run)
