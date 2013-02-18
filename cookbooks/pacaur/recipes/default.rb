@@ -5,10 +5,11 @@ packages = [
 
 packages.each do |specified_package|
     execute "install #{specified_package} necessary for AUR packages management" do
-      command "pacman -U --noconfirm --noprogressbar ../../aur-packages/#{specified_package}.pkg.tar.xz"
+      command "pacman -U --noconfirm --noprogressbar aur-packages/#{specified_package}.pkg.tar.xz"
+      cwd "/tmp/afronski-provisioning/provisioning"
     end
 end
 
 execute "update newly installed AUR packages" do
-    command "pacaur -Syua --noconfirm  --noprogressbar"
+    command "pacaur -Sua --noconfirm --noedit --noprogressbar"
 end
