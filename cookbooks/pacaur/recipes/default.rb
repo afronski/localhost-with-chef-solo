@@ -4,11 +4,11 @@ packages = [
 ]
 
 packages.each do |specified_package|
-    execute "Install #{specified_package} necessary for AUR packages management" do
-      command "pacman -U --noconfirm --noprogressbar aur-packages/#{specified_package}.pkg.tar.xz"
+    execute "install #{specified_package} necessary for AUR packages management" do
+      command "pacman -U --noconfirm --noprogressbar ../../aur-packages/#{specified_package}.pkg.tar.xz"
     end
 end
 
-execute "Update newly installed AUR packages" do
+execute "update newly installed AUR packages" do
     command "pacaur -Syua --noconfirm  --noprogressbar"
 end
