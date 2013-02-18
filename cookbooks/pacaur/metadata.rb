@@ -1,0 +1,6 @@
+name             "pacaur"
+maintainer       "afronski"
+maintainer_email "afronski@gmail.com"
+license          "MIT License"
+description      "Adding Pacaur manager for AUR repositories"
+version          "0.1.0"

@@ -20,11 +20,27 @@ office = %w{}
 packages = [
     vcss,
 
-    opengl
+    opengl,
+
+    tools,
+    editors,
+
+    browsers
 ]
 
 packages.flatten.each do |a_package|
     package a_package
+end
+
+# All recipes to include.
+aur_manager = %w{pacaur}
+
+recipes = [
+    aur_manager
+]
+
+recipes.flatten.each do |a_recipe|
+    include_recipe a_recipe
 end
 
 # AUR packages to install.
@@ -35,16 +51,7 @@ aur_packages = [
 ]
 
 aur_packages.flatten.each do |a_aur_package|
-    pacman_aur a_aur_package
-end
-
-# All recipes to include.
-utils = %w{}
-
-recipes = [
-
-]
-
-recipes.flatten.each do |a_recipe|
-    include_recipe a_recipe
+    execute "install AUR package #{a_aur_package}" do
+      command "pacaur -S --noconfirm  --noprogressbar #{a_aur_package}"
+    end
 end
