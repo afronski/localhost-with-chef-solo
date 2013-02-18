@@ -50,8 +50,8 @@ aur_packages = [
     aur_browsers
 ]
 
-aur_packages.flatten.join(" ") do |packages_list|
-    execute "install AUR package #{packages_list}" do
-      command "pacaur -S --noconfirm --noedit --noprogressbar #{packages_list}"
-    end
+packages_list = aur_packages.flatten.join(" ")
+
+execute "install AUR package #{packages_list}" do
+  command "pacaur -S --noconfirm --noedit --noprogressbar #{packages_list}"
 end
