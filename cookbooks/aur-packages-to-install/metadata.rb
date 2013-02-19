@@ -1,0 +1,6 @@
+name             "aur-packages-to-install"
+maintainer       "afronski"
+maintainer_email "afronski@gmail.com"
+license          "MIT License"
+description      "Install all needed packages from AUR repositories"
+version          "0.1.0"

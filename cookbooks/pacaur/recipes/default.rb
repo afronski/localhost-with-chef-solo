@@ -11,15 +11,13 @@ packages = [
 
 # Install program and dependencies for AUR packages and repositories management.
 packages.each do |aur_management_package|
-    package_name = "aur-packages/#{aur_management_package.name}-#{aur_management_package.version}.pkg.tar.xz"
-
-    execute "install prepared package for AUR repositories management (#{package_name})"
-        command "pacaur -U --noedit --noconfirm #{package_name}"
+    execute "install prepared package for AUR repositories management (#{aur_management_package[:name]})" do
+        command "pacman -U --noconfirm --needed --noprogressbar aur-packages/#{aur_management_package[:name]}-#{aur_management_package[:version]}.pkg.tar.xz"
         cwd "/tmp/afronski-provisioning/provisioning"
     end
 end
 
 # Update AUR packages.
-execute "upgrade all installed AUR packages"
-    command "pacaur -Sua --noedit --noconfirm"
+execute "upgrade all installed AUR packages" do
+    command "pacaur -Sua --noedit --noconfirm --asroot"
 end
