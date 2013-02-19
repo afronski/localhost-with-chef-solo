@@ -1,16 +1,16 @@
 {
     "run_list": [
-        "recipe[packages-to-remove]",
-        "recipe[packages-to-install]",
+        //"recipe[packages-to-remove]",
+        //"recipe[packages-to-install]",
 
         "recipe[pacaur]",
 
         "recipe[get-repositories]",
-        "recipe[install-dotfiles]"//,
+        "recipe[install-dotfiles]",
 
-        // "recipe[install-node-environment]",
-        // "recipe[gems]",
+        "recipe[install-node-environment]",
+        "recipe[gems]"//,
 
-        // "recipe[aur-packages-to-install]"
+        //"recipe[aur-packages-to-install]"
     ]
 }

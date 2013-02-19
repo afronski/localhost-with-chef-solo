@@ -1,5 +1,5 @@
 # Packages for removing.
-packages = [ "yaourt" ]
+packages = [ "yaourt", "nano" ]
 
 packages.each do |a_package|
     package a_package do
