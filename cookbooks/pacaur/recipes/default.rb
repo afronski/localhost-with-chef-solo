@@ -7,12 +7,12 @@ packages.each do |specified_package|
     execute "install #{specified_package} necessary for AUR packages management" do
       command "pacman -U --noconfirm --noprogressbar aur-packages/#{specified_package}.pkg.tar.xz"
       cwd "/tmp/afronski-provisioning/provisioning"
-      action :run
-    end
+      action :nothing
+    end.run_action :run
 end
 
 # Update AUR packages.
 execute "update newly installed AUR packages" do
     command "pacaur -Sua --noconfirm --noedit --noprogressbar"
-    action :run
-end
+    action :nothing
+end.run_action :run

@@ -57,6 +57,6 @@ aur_packages = [
 aur_packages.flatten.each do |a_aur_package|
     execute "install AUR package #{a_aur_package}" do
       command "pacaur -S --noconfirm --noedit --noprogressbar #{a_aur_package}"
-      action :run
-    end
+      action :nothing
+    end.run_action :run
 end
