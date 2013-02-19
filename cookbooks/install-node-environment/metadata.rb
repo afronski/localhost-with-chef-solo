@@ -1,0 +1,7 @@
+name             "install-node-environment"
+maintainer       "afronski"
+maintainer_email "afronski@gmail.com"
+license          "MIT License"
+description      "Install all needed packages for node.js development"
+version          "0.1.0"
+depends          "npm"

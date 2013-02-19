@@ -1,0 +1,6 @@
+name             "get-repositories"
+maintainer       "afronski"
+maintainer_email "afronski@gmail.com"
+license          "MIT License"
+description      "Clone all github repositories into specified directory"
+version          "0.1.0"

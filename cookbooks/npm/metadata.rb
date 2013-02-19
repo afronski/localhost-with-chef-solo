@@ -1,0 +1,6 @@
+name             "npm"
+maintainer       "afronski"
+maintainer_email "afronski@gmail.com"
+license          "MIT License"
+description      "Node package manager provider"
+version          "0.1.0"
