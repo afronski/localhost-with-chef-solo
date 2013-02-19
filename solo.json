@@ -1,8 +1,8 @@
 {
     "run_list": [
-        //"recipe[packages-to-remove]",
-        //"recipe[update-all-packages]",
-        //"recipe[packages-to-install]",
+        "recipe[packages-to-remove]",
+        "recipe[update-all-packages]",
+        "recipe[packages-to-install]",
 
         "recipe[pacaur]",
 
@@ -11,8 +11,8 @@
         "recipe[install-etcfiles]",
 
         "recipe[install-node-environment]",
-        "recipe[gems]"//,
+        "recipe[gems]",
 
-        //"recipe[aur-packages-to-install]"
+        "recipe[aur-packages-to-install]"
     ]
 }
