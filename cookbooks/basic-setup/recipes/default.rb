@@ -36,7 +36,6 @@ end
 aur_manager = %w{pacaur}
 
 recipes = [
-    aur_manager
 ]
 
 recipes.flatten.each do |a_recipe|
@@ -47,16 +46,11 @@ end
 aur_browsers = %w{google-chrome-dev firefox-nightly opera-next}
 
 aur_packages = [
-    aur_browsers
 ]
 
-# @TODO: Nie czeka na zakończenie Pacaura (pacman działa ok) :(
-# @TODO: Czy potrzeba reszty z recepty pacmana? Przerób ją na własną.
 # @TODO: Ścieżka dla root w Chef::Config.
 # @TODO: Przejrzyj listę pakietów i listę do usunięcia!
+
 aur_packages.flatten.each do |a_aur_package|
-    execute "install AUR package #{a_aur_package}" do
-      command "pacaur -S --noconfirm --noedit --noprogressbar #{a_aur_package}"
-      action :nothing
-    end.run_action :run
+    package a_aur_package
 end
