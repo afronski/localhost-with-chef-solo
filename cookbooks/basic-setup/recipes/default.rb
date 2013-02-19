@@ -9,7 +9,7 @@ opengl = %w{glfw glew mesa-demos glu freeglut}
 nosql = %w{}
 java = %w{}
 
-tools = %w{sublime-text}
+tools = %w{sublime-text gimp imagemagick}
 editors = %w{vim}
 
 browsers = %w{firefox chromium opera}
@@ -50,8 +50,10 @@ aur_packages = [
     aur_browsers
 ]
 
+# @TODO: Nie czeka na zakończenie Pacaura (pacman działa ok) :(
+# @TODO: Czy potrzeba reszty z recepty pacmana? Przerób ją na własną.
+# @TODO: Ścieżka dla root w Chef::Config.
+# @TODO: Przejrzyj listę pakietów i listę do usunięcia!
 aur_packages.flatten.each do |a_aur_package|
-    execute "install AUR package #{a_aur_package}" do
-      command "pacaur -S --noconfirm --noedit --noprogressbar #{a_aur_package}"
-    end
+    execute "pacaur -S --noconfirm --noedit --noprogressbar #{a_aur_package}"
 end
