@@ -55,5 +55,8 @@ aur_packages = [
 # @TODO: Ścieżka dla root w Chef::Config.
 # @TODO: Przejrzyj listę pakietów i listę do usunięcia!
 aur_packages.flatten.each do |a_aur_package|
-    execute "pacaur -S --noconfirm --noedit --noprogressbar #{a_aur_package}"
+    execute "install AUR package #{a_aur_package}" do
+      command "pacaur -S --noconfirm --noedit --noprogressbar #{a_aur_package}"
+      action :run
+    end
 end
