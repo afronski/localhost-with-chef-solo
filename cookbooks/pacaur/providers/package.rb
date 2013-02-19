@@ -1,6 +1,6 @@
 action :install do
     execute "install AUR package #{new_resource.name}" do
-        command "pacaur -Sa --noedit --noconfirm --asroot #{new_resource.name}"
+        command "pacaur -Sa --needed --noedit --noconfirm --asroot #{new_resource.name}"
     end
 
     new_resource.updated_by_last_action(true)
