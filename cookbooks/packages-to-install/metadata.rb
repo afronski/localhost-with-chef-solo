@@ -1,4 +1,4 @@
-name             "basic-setup"
+name             "packages-to-install"
 maintainer       "afronski"
 maintainer_email "afrnski@gmail.com"
 license          "MIT License"

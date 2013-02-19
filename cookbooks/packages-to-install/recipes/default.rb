@@ -31,26 +31,3 @@ packages = [
 packages.flatten.each do |a_package|
     package a_package
 end
-
-# All recipes to include.
-aur_manager = %w{pacaur}
-
-recipes = [
-]
-
-recipes.flatten.each do |a_recipe|
-    include_recipe a_recipe
-end
-
-# AUR packages to install.
-aur_browsers = %w{google-chrome-dev firefox-nightly opera-next}
-
-aur_packages = [
-]
-
-# @TODO: Ścieżka dla root w Chef::Config.
-# @TODO: Przejrzyj listę pakietów i listę do usunięcia!
-
-aur_packages.flatten.each do |a_aur_package|
-    package a_aur_package
-end

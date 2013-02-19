@@ -1,6 +1,7 @@
 {
     "run_list": [
         "recipe[packages-to-remove]",
-        "recipe[basic-setup]"
+        "recipe[packages-to-install]",
+        "recipe[pacaur]"
     ]
 }
