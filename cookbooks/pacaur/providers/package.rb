@@ -1,13 +1,11 @@
 action :install do
-    cmd = "pacaur -Su --noedit --noconfirm --asroot #{new_resource.name}"
-    execute "install AUR package (#{new_resource.name})" do
-        command cmd
+    execute "install AUR package #{new_resource.name}" do
+        command "pacaur -Sy --noedit --noconfirm --asroot #{new_resource.name}"
     end
 end
 
 action :uninstall do
-    cmd = "pacaur -R --noedit --noconfirm --asroot #{new_resource.name}"
-    execute "uninstall AUR package (#{new_resource.name})" do
-        command cmd
+    execute "uninstall AUR package #{new_resource.name}" do
+        command "pacaur -R --noedit --noconfirm --asroot #{new_resource.name}"
     end
 end

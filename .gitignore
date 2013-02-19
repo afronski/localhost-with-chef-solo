@@ -1,2 +1,3 @@
 chef-stacktrace.out
+chef-client-running.pid
 *.packages
