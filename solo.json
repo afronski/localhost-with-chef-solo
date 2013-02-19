@@ -7,6 +7,7 @@
 
         "recipe[get-repositories]",
         "recipe[install-dotfiles]",
+        "recipe[install-etcfiles]",
 
         "recipe[install-node-environment]",
         "recipe[gems]"//,

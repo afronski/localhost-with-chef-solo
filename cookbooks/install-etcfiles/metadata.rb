@@ -1,4 +1,4 @@
-name             "install-dotfiles"
+name             "install-etcfiles"
 maintainer       "afronski"
 maintainer_email "afronski@gmail.com"
 license          "MIT License"
