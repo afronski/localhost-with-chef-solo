@@ -9,7 +9,7 @@ servers = %w{apache nginx lighttpd yaws mysql php-apache sqlite}
 nosql = %w{redis couchdb mongodb}
 java = %w{jre7-openjdk jre7-openjdk-headless jdk7-openjdk scala sbt clojure jmeter}
 
-tools = %w{antlr2 apache-ant aspell-pl bc bison cmake colordiff colorgcc curl ccze flex feh htop iotop lsof mc powertop scons scrot strace valgrind wget }
+tools = %w{antlr2 apache-ant aspell-pl bc bison cmake colordiff colorgcc curl ccze flex feh htop iotop lsof mc powertop rsync scons scrot strace valgrind wget }
 archive = %w{zip p7zip arj unarj unrar unzip}
 
 net_tools = %w{gnu-netcat nmap networkmanager-openvpn openvpn openssh openssl ppp rdesktop sip wireshark-cli wireshark-gtk}

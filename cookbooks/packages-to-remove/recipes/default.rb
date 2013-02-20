@@ -3,6 +3,7 @@ force_removal_packages = [ "granite-bzr" ]
 packages = [
     "brasero",
     "faenza-hotot-icon",
+    "gmpc",
     "hotot-gtk3-git",
     "hotot-data-git",
     "nano",

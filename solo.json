@@ -13,7 +13,7 @@
 
         "recipe[customized-actions-after-install]",
         "recipe[install-etcfiles]",
-        "recipe[install-dotfiles]",
-        "recipe[get-repositories]"
+        "recipe[install-dotfiles]"//,
+        // "recipe[get-repositories]"
     ]
 }
