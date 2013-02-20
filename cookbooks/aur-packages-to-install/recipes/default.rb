@@ -4,7 +4,7 @@ include_recipe "pacaur"
 aur_browsers = %w{google-chrome-dev firefox-nightly opera-next google-talkplugin}
 graphics = %w{bbswitch bumblebee nvidia-bumblebee nvidia-utils-bumblebee}
 nosql = %w{riak rabbitmq}
-other_tools = %w{dropbox phantomjs-bin snort}
+other_tools = %w{sublime-text dropbox phantomjs-bin snort}
 languages = %w{io}
 
 aur_packages = [

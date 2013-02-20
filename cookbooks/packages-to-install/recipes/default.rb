@@ -17,7 +17,7 @@ gfx = %w{gimp imagemagick flashplugin mplayer mpg123 opencv opencv-docs opencv-s
 music = %w{gmpc mpd ncmpcpp mpdscribble sox}
 tex = %w{texinfo texlive-bibtexextra texlive-bin texlive-core texlive-fontsextra texlive-formatsextra texlive-pictures}
 
-editors = %w{gvim sublime-text}
+editors = %w{gvim}
 ide = %w{eclipse netbeans}
 
 browsers = %w{firefox chromium opera}
