@@ -1,5 +1,8 @@
-gems = %w{bundler rails foodcritic rake sass compass vagrant chef knife}
+gems = %w{bundler rails foodcritic rake sass compass vagrant chef knife-ec2}
 
 gems.each do |gem|
-    gem_package gem
+    gem_package gem do
+        user "afronski"
+        group "users"
+    end
 end
