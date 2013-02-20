@@ -1,18 +1,19 @@
 {
     "run_list": [
-        "recipe[packages-to-remove]",
-        "recipe[update-all-packages]",
-        "recipe[packages-to-install]",
+        // "recipe[packages-to-remove]",
+        // "recipe[update-all-packages]",
+        // "recipe[packages-to-install]",
 
-        "recipe[pacaur]",
+        // "recipe[pacaur]",
 
-        "recipe[get-repositories]",
-        "recipe[install-dotfiles]",
+        // "recipe[install-node-environment]",
+        // "recipe[gems]",
+
+        // "recipe[aur-packages-to-install]",
+
+        "recipe[customized-actions-after-install]",
         "recipe[install-etcfiles]",
-
-        "recipe[install-node-environment]",
-        "recipe[gems]",
-
-        "recipe[aur-packages-to-install]"
+        "recipe[install-dotfiles]",
+        "recipe[get-repositories]"
     ]
 }
