@@ -49,6 +49,7 @@ repos.each do |repo|
         repository url
         user destination_user
         group destination_group
-        action :checkout
+        reference "master"
+        action :sync
     end
 end
