@@ -1,6 +1,19 @@
 # Packages for removing.
 force_removal_packages = [ "granite-bzr" ]
-packages = [ "nano", "vim", "vi", "yaourt" ]
+packages = [
+    "brasero",
+    "faenza-hotot-icon",
+    "hotot-gtk3-git",
+    "hotot-data-git",
+    "nano",
+    "pacmanxg4",
+    "transmission-cli",
+    "transmission-gtk",
+    "vim",
+    "vi",
+    "xnoise",
+    "yaourt"
+]
 
 packages.each do |a_package|
     package a_package do

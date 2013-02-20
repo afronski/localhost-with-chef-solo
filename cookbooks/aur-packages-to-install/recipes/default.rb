@@ -16,5 +16,13 @@ aur_packages = [
 ]
 
 aur_packages.flatten.each do |a_aur_package|
-    pacaur_package a_aur_package
+    # pacaur_package a_aur_package
+end
+
+# Customized elements for AUR packages.
+
+execute "enable big amount of 'max_user_watches' for dropbox client" do
+    user "afronski"
+    group "users"
+    command "echo 100000 | tee /proc/sys/fs/inotify/max_user_watches"
 end
