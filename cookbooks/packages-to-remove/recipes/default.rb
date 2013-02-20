@@ -1,6 +1,6 @@
 # Packages for removing.
 force_removal_packages = [ "granite-bzr" ]
-packages = [ "nano", "vim, "vi", "yaourt" ]
+packages = [ "nano", "vim", "vi", "yaourt" ]
 
 packages.each do |a_package|
     package a_package do
