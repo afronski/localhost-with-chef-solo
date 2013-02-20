@@ -13,8 +13,8 @@ tools = %w{antlr2 apache-ant aspell-pl bc bison cmake colordiff colorgcc curl cc
 archive = %w{zip p7zip arj unarj unrar unzip}
 
 net_tools = %w{gnu-netcat nmap networkmanager-openvpn openvpn openssh openssl ppp rdesktop sip wireshark-cli wireshark-gtk}
-gfx = %w{gimp imagemagick flashplugin mplayer mpg123 opencv opencv-docs opencv-samples}
-music = %w{gmpc mpd ncmpcpp mpdscribble sox}
+gfx = %w{gimp imagemagick flashplugin mplayer opencv opencv-docs opencv-samples}
+music = %w{mpd ncmpcpp mpdscribble sox mpg123}
 tex = %w{texinfo texlive-bibtexextra texlive-bin texlive-core texlive-fontsextra texlive-formatsextra texlive-pictures}
 
 editors = %w{gvim}
