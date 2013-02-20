@@ -1,5 +1,6 @@
 # Create main directory for all repositories.
 repositories = "/home/afronski/Repositories"
+github_root = "git@github.com:afronski/%s.git"
 
 destination_mode = 00755
 destination_group = "users"
@@ -13,14 +14,29 @@ directory repositories do
 end
 
 repos = [
-    {
-        :uri => "git@github.com:afronski/tv-series.git",
-        :directory => "tv-series"
-    }
+    "e-learning",
+    "provisioning",
+    "grammar-generator",
+    "playground-repository",
+    "grunt-contrib-copy",
+    "spectrum",
+    "grunt-plato",
+    "grunt-bower-task",
+    "templates-boilerplates-snippets",
+    "presentations",
+    "ssied-projekt",
+    "dotfiles-repository",
+    "my-mvc-framework",
+    "linquist",
+    "x86-ray-tracer",
+    "transfusion",
+    "bango",
+    "tv-series"
 ]
 
 repos.each do |repo|
-    destination = repositories + "/" + repo[:directory]
+    destination = File.join(repositories, repo)
+    url = github_root % [ repo ]
 
     directory destination do
         owner destination_user
@@ -30,7 +46,7 @@ repos.each do |repo|
     end
 
     git destination do
-        repository repo[:uri]
+        repository url
         user destination_user
         group destination_group
         action :checkout

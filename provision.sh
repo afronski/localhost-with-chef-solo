@@ -24,6 +24,7 @@ if [ ! -e "/root/.ssh/id_rsa" ]; then
     cp /home/$USERNAME/.ssh/id_rsa* /root/.ssh/
 fi
 
+chmod 0600 /home/$USERNAME/.ssh/id_rsa*
 chmod 0600 /root/.ssh/id_rsa*
 
 # Prepare environment.
