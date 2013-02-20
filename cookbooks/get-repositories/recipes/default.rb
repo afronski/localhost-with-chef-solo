@@ -27,7 +27,7 @@ repos = [
     "ssied-projekt",
     "dotfiles-repository",
     "my-mvc-framework",
-    "linquist",
+    "linguist",
     "x86-ray-tracer",
     "transfusion",
     "bango",
