@@ -35,7 +35,7 @@ repos = [
 ]
 
 execute "go to the repositories directory" do
-    command "pushd #{destination}"
+    command "pushd #{repositories}"
 end
 
 repos.each do |repo|
