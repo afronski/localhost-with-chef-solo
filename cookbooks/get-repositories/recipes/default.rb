@@ -45,11 +45,7 @@ repos.each do |repo|
         action :create
     end
 
-    git destination do
-        repository url
-        # user destination_user
-        # group destination_group
-        reference "master"
-        action :sync
+    execute "#{destination} -> git clone #{url}" do
+        command "sudo -u afronski 'git clone #{url}"
     end
 end
