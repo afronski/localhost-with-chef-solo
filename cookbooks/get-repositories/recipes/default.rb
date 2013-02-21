@@ -6,6 +6,15 @@ destination_mode = 00755
 destination_group = "users"
 destination_user = "afronski"
 
+execute "Directory #{repositories} will be deleted in 20 seconds - STOP IT NOW IF IT SHOULDN'T DO IT !" do
+    command "sleep 20;"
+end
+
+directory repositories do
+    recursive true
+    action :delete
+end
+
 directory repositories do
     owner destination_user
     group destination_group
@@ -34,10 +43,6 @@ repos = [
     "tv-series"
 ]
 
-execute "go to the repositories directory" do
-    command "pushd #{repositories}"
-end
-
 repos.each do |repo|
     destination = File.join(repositories, repo)
     url = github_root % [ repo ]
@@ -50,10 +55,6 @@ repos.each do |repo|
     end
 
     execute "#{destination} -> git clone #{url}" do
-        command "su afronski -c 'git clone #{url}'"
+        command "su afronski -c 'git clone #{url} #{destination}'"
     end
-end
-
-execute "return from the repositories directory" do
-    command "popd"
 end
