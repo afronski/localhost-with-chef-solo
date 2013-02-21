@@ -33,7 +33,7 @@ pacman -S --quiet --needed --noconfirm git ruby
 CHEF_INSTALLED=`gem list --installed "^chef$"`
 
 if [ "$CHEF_INSTALLED" != "true" ]; then
-    gem install chef --no-ri --no-rdoc
+    gem install chef --version '< 11.4.0' --no-ri --no-rdoc
 fi
 
 GEM_BIN_DIR=`gem env | grep "$HOME" | awk '{ print $2 }'`
