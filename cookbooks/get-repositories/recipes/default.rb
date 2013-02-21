@@ -34,6 +34,10 @@ repos = [
     "tv-series"
 ]
 
+execute "go to the repositories directory" do
+    command "pushd #{destination}"
+end
+
 repos.each do |repo|
     destination = File.join(repositories, repo)
     url = github_root % [ repo ]
@@ -48,4 +52,8 @@ repos.each do |repo|
     execute "#{destination} -> git clone #{url}" do
         command "su afronski -c 'git clone #{url}'"
     end
+end
+
+execute "return from the repositories directory" do
+    command "popd"
 end
