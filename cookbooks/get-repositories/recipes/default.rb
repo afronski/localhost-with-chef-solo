@@ -47,8 +47,8 @@ repos.each do |repo|
 
     git destination do
         repository url
-        user destination_user
-        group destination_group
+        # user destination_user
+        # group destination_group
         reference "master"
         action :sync
     end
