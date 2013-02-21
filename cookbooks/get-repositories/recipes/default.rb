@@ -46,6 +46,6 @@ repos.each do |repo|
     end
 
     execute "#{destination} -> git clone #{url}" do
-        command "sudo -u afronski 'git clone #{url}"
+        command "sudo -u afronski 'git clone #{url}'"
     end
 end
