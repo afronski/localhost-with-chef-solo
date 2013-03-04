@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 
 USERNAME=afronski
+START_DIR=`pwd`
 
 # Check root rights.
 WHOAMI=`whoami`
@@ -48,8 +49,13 @@ fi
 mkdir -p $TMP_DIRECTORY
 pushd $TMP_DIRECTORY
 
-# Clone repository and go to the repository.
-git clone git@github.com:afronski/provisioning.git
+# Clone (or copy) repository and go to the repository.
+if [ "$1" == "--local" ]; then
+    echo "Copying local version..."
+    cp -r $START_DIR .
+else
+    git clone git@github.com:afronski/provisioning.git
+fi
 pushd provisioning
 
 # Provision environment.
