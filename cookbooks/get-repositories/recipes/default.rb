@@ -25,7 +25,7 @@ repos = [
     "templates-boilerplates-snippets",
     "presentations",
     "ssied-projekt",
-    "dotfiles-repository",
+    "dotfiles",
     "my-mvc-framework",
     "linguist",
     "x86-ray-tracer",
