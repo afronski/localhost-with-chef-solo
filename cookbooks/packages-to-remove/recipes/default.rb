@@ -8,6 +8,7 @@ packages = [
     "hotot-data-git",
     "nano",
     "pacmanxg4",
+    "shotwell",
     "transmission-cli",
     "transmission-gtk",
     "vim",

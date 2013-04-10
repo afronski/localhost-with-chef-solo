@@ -1,5 +1,7 @@
 {
     "run_list": [
+        "recipe[restore-pacman-configuration]",
+
         "recipe[packages-to-remove]",
         "recipe[update-all-packages]",
         "recipe[packages-to-install]",

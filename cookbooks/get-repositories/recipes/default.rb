@@ -23,6 +23,7 @@ directory repositories do
 end
 
 repos = [
+    "afronski.github.com",
     "e-learning",
     "provisioning",
     "grammar-generator",

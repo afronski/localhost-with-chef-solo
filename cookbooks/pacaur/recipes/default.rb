@@ -1,11 +1,11 @@
 packages = [
     {
         :name => "cower",
-        :version => "6-1-x86_64"
+        :version => "9-1-x86_64"
     },
     {
         :name => "pacaur",
-        :version => "3.2.3-1-any"
+        :version => "4.1.1-1-any"
     }
 ]
 

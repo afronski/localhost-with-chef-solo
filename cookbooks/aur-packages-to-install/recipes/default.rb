@@ -2,14 +2,12 @@ include_recipe "pacaur"
 
 # AUR packages to install.
 aur_browsers = %w{google-chrome-dev firefox-nightly opera-next google-talkplugin}
-graphics = %w{bbswitch bumblebee nvidia-bumblebee nvidia-utils-bumblebee}
 nosql = %w{riak rabbitmq}
-other_tools = %w{sublime-text dropbox phantomjs-bin snort}
+other_tools = %w{dropbox pbcopy phantomjs-bin snort sublime-text}
 languages = %w{io}
 
 aur_packages = [
     aur_browsers,
-    graphics,
     nosql,
     other_tools,
     languages
