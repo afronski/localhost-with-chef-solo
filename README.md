@@ -1,4 +1,4 @@
-Provisioning with Chef-Solo
+Provisioning localhost with Chef-Solo
 =========================================
 
 Customized scripts for provisioning my local development environment.
