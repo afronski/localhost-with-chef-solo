@@ -3,7 +3,8 @@ gems = %w{jekyll rdiscount
           bundler rails rake
           sass compass
           vagrant chef foodcritic knife-ec2
-          yajl-ruby erubis}
+          yajl-ruby erubis
+          wbench}
 
 gems.each do |gem|
     gem_package gem
