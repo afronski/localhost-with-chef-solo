@@ -1,7 +1,8 @@
-Provisioning localhost with Chef
-=========================================
+What?
+====
 
-Customized scripts for provisioning my local development environment.
+Customized scripts for provisioning my local development environment with use of Chef-Solo.
+
 
 TODO
 ====
