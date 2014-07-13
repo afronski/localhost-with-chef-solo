@@ -26,7 +26,8 @@ Customized scripts for provisioning automatically my local development environme
   - OpenSSH (keys and configuration provided as a parameter).
   - OpenVPN (certificates delivered as a parameter).
   - JDK + JRE (multiple versions - 1.7 and 1.8) + `scala` + `sbt` + `clojure` + `leiningen`.
-- The simplest possible orchestration for that.
+  - Setting up `docker` and `LXC`.
+- The simplest possible orchestration for that requirements.
 
 # TODO
 
